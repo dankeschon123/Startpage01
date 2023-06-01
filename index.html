@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>简约导航</title>
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+	<meta content="telephone=no,email=no" name="format-detection">
+	<meta content="yes" name="apple-mobile-web-app-capable">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="apple-touch-fullscreen" content="yes">
+	<meta name="keywords" content="简约导航">
+	<meta name="description" content="一个简单美观可自定义的网址导航">
+	<link rel="shortcut icon" href="favicon.ico">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/yidong.css">
+	<!-- 本项目开源地址：https://github.com/appexplore/jianavi 请勿完全抄袭源码，请勿声明自己是原创 -->
+</head>
+
+<body>
+	<!-- 自定义按钮start -->
+	<div class="zdy_button" onclick="zyd_show();">
+		<img src="img/cl.ico">
+	</div>
+	<!-- 自定义按钮end -->
+
+	<!-- 自定义弹窗start -->
+	<div class="zdy">
+		<div class="zdy_content">
+			<div class="zdy_top">
+				<span class="zdy_edit"></span>自定义链接
+				<span class="zdy_close" onclick="zdy_close();"></span>
+			</div>
+			<div class="zdy_mi">
+				<div class="z_m_i">
+					<span class="z_i_img_1"></span>
+					<input type="text" class="zdy_input zdy_name" placeholder="微博">
+				</div>
+				<div class="z_m_i">
+					<span class="z_i_img_2"></span>
+					<input type="text" class="zdy_input zdy_link" placeholder="http://www.weibo.com/">
+				</div>
+				<div>
+					<font size="2" color="gray">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;请注意：数据是临时存储在本地电脑上，数据丢失无法找回</font>
+				</div>
+			</div>
+			<div class="zdy_foot">
+				<div class="zdy_false zdy_b" onclick="zdy_false();">取消</div>
+				<div class="zdy_true zdy_b" onclick="zdy_true();">确定</div>
+			</div>
+		</div>
+	</div>
+	<!-- 自定义弹窗end -->
+	<!-- 搜索栏start
+	<div class="baidu baidu-2">
+		<form name="f" action="https://fsoufsou.com/search" target="_blank">
+			<div class="Select-box-2" id="baidu">
+				<ul>
+					<li class="this_s">F 搜</li>
+					<li class="miji_s">duck</li>
+					<li class="bing_s">必 应</li>
+					<li class="google_s">谷 歌</li>
+					<li class="baidu_s">百 度</li>
+					<li class="ff_s">F 搜</li>
+				</ul>
+			</div>
+			<div class="in5">
+				<input name="q" id="kw-2" maxlength="100" autocomplete="off" type="text">
+				<div class="qingkong" id="qingkong" title="清空">x</div>
+			</div>
+			<input value="搜 索" id="su-2" type="submit">
+		</form>
+		<ul class="keylist"></ul>
+	</div>
+	搜索栏end -->
+
+	<!-- 搜索栏start
+	<div class="baidu baidu-2">
+		<form name="f" action="https://www.amazon.ca/s" target="_blank">
+			<div class="Select-box-2" id="baidu">
+				<ul>
+					<li class="this_s">F 搜</li>
+					<li class="miji_s">duck</li>
+					<li class="bing_s">必 应</li>
+					<li class="google_s">谷 歌</li>
+					<li class="baidu_s">百 度</li>
+					<li class="ff_s">F 搜</li>
+				</ul>
+			</div>
+			<div class="in5">
+				<input name="k" id="kw-2" maxlength="100" autocomplete="off" type="text">
+				<div class="qingkong" id="qingkong" title="清空">x</div>
+			</div>
+			<input value="搜 索" id="su-2" type="submit">
+		</form>
+		<ul class="keylist"></ul>
+	</div>
+	搜索栏end -->
+	
+	
+	<!-- 搜索栏start -->
+	
+<div class="baidu baidu-2">
+  <form name="f" target="_blank">
+    <div class="select-box">
+      <ul>
+        <li class="this-s" data-url="https://www.google.com/search">Google</li>
+        <li class="amazon-s" data-url="https://www.amazon.com/s">Amazon</li>
+        <li class="bing-s" data-url="https://www.bing.com/search">Bing</li>
+      </ul>
+    </div>
+    <div class="in5">
+      <input name="q" id="search-input" maxlength="100" autocomplete="off" type="text">
+      <div class="clear" id="clear-btn" title="Clear">x</div>
+    </div>
+    <input value="Search" id="su-2" type="submit">
+  </form>
+  <ul class="keylist"></ul>
+</div>
+
+
+
+<!-- 搜索栏end -->
+
+
+	<!-- 内容start -->
+	<div class="body">
+		<div class="content">
+			<div class="jianjie">
+				<div class="jj-list">
+					<div class="jj-list-tit"></div>
+					<ul class="jj-list-con _b">
+						
+<li><a href="https://www.amazon.ca/dp/B09X2VSV8V/" class="link-3" target="_blank" rel="nofollow">V8V_199</a></li>
+<li><a href="https://www.amazon.ca/dp/B08TT9H3C7/" class="link-3" target="_blank" rel="nofollow">3C7_188</a></li>
+<li><a href="https://www.amazon.ca/dp/B08F9WS9D4/" class="link-3" target="_blank" rel="nofollow">9D4_169</a></li>
+<li><a href="https://www.amazon.ca/dp/B08F9P9LVS/" class="link-3" target="_blank" rel="nofollow">LVS_164</a></li>
+<li><a href="https://www.amazon.ca/dp/B08BC9VKHB/" class="link-3" target="_blank" rel="nofollow">KHB_148</a></li>
+<li><a href="https://www.amazon.ca/dp/B09X2NNN36/" class="link-3" target="_blank" rel="nofollow">N36_145</a></li>
+<li><a href="https://www.amazon.ca/dp/B09X2XDB5Q/" class="link-3" target="_blank" rel="nofollow">B5Q_132</a></li>
+<li><a href="https://www.amazon.ca/dp/B08BBTS3YH/" class="link-3" target="_blank" rel="nofollow">3YH_124</a></li>
+<li><a href="https://www.amazon.ca/dp/B08TWBG2C9/" class="link-3" target="_blank" rel="nofollow">2C9_122</a></li>
+					</ul>
+				</div>
+				<div class="jj-list">
+					<div class="jj-list-tit"></div>
+					<ul class="jj-list-con _b">
+<li><a href="https://www.amazon.ca/dp/B08VS41SDQ/" class="link-3" target="_blank" rel="nofollow">SDQ_118</a></li>
+<li><a href="https://www.amazon.ca/dp/B09LYNKM4B/" class="link-3" target="_blank" rel="nofollow">M4B_102</a></li>
+<li><a href="https://www.amazon.ca/dp/B08CK484DK/" class="link-3" target="_blank" rel="nofollow">4DK_82</a></li>
+<li><a href="https://www.amazon.ca/dp/B09X2W8NMP/" class="link-3" target="_blank" rel="nofollow">NMP_73</a></li>
+<li><a href="https://www.amazon.ca/dp/B0B157NBSY/" class="link-3" target="_blank" rel="nofollow">BSY_55</a></li>
+<li><a href="https://www.amazon.ca/dp/B08YX1RJS6/" class="link-3" target="_blank" rel="nofollow">JS6_47</a></li>
+<li><a href="https://www.amazon.ca/dp/B0B158DM9Z/" class="link-3" target="_blank" rel="nofollow">M9Z_43</a></li>
+<li><a href="https://www.amazon.ca/dp/B08F78SJDN/" class="link-3" target="_blank" rel="nofollow">JDN_40</a></li>
+<li><a href="https://www.amazon.ca/dp/B09X2WZGDC/" class="link-3" target="_blank" rel="nofollow">GDC_36</a></li>
+					</ul>
+				</div>
+				<div class="jj-list">
+					<div class="jj-list-tit"></div>
+					<ul class="jj-list-con _b">
+<li><a href="https://www.amazon.ca/dp/B08FJ98HCD/" class="link-3" target="_blank" rel="nofollow">HCD_32</a></li>
+<li><a href="https://www.amazon.ca/dp/B0B1584Z4Y/" class="link-3" target="_blank" rel="nofollow">Z4Y_29</a></li>
+<li><a href="https://www.amazon.ca/dp/B0B15878DC/" class="link-3" target="_blank" rel="nofollow">8DC_29</a></li>
+<li><a href="https://www.amazon.ca/dp/B07RTHRHSN/" class="link-3" target="_blank" rel="nofollow">HSN_28</a></li>
+<li><a href="https://www.amazon.ca/dp/B08DLPHSG6/" class="link-3" target="_blank" rel="nofollow">SG6_28</a></li>
+<li><a href="https://www.amazon.ca/dp/B08F7KSV6Y/" class="link-3" target="_blank" rel="nofollow">V6Y_24</a></li>
+<li><a href="https://www.amazon.ca/dp/B09X2W8M8Z/" class="link-3" target="_blank" rel="nofollow">M8Z_23</a></li>
+<li><a href="https://www.amazon.ca/dp/B09X35B5MM/" class="link-3" target="_blank" rel="nofollow">5MM_21</a></li>
+<li><a href="http://www.pcgeshi.com/index.html" class="link-3" target="_blank" rel="nofollow">格式工厂</a></li>
+					</ul>
+				</div>
+				<div class="jj-list">
+					<div class="jj-list-tit"></div>
+					<ul class="jj-list-con _b">
+<li><a href="https://www.amazon.ca/dp/B0B1597JP1/" class="link-3" target="_blank" rel="nofollow">JP1_20</a></li>
+<li><a href="https://www.amazon.ca/dp/B09X2VTFRB/" class="link-3" target="_blank" rel="nofollow">FRB_19</a></li>
+<li><a href="https://www.amazon.ca/dp/B09LYQXTJ5/" class="link-3" target="_blank" rel="nofollow">TJ5_18</a></li>
+<li><a href="https://www.bing.com/new?form=MY028Z&OCID=MY028Z" class="link-3" target="_blank" rel="nofollow">New Bing</a></li>
+<li><a href="https://www.amazon.ca/dp/B07PZJW3KS/" class="link-3" target="_blank" rel="nofollow">3KS_14</a></li>
+<li><a href="https://t.zsxq.com/0c6BLqYZK" class="link-3" target="_blank" rel="nofollow">ChatGPT</a></li>
+<li><a href="https://azure.microsoft.com/en-us/" class="link-3" target="_blank" rel="nofollow">Azure</a></li>
+<li><a href="https://www.iamwawa.cn/" class="link-3" target="_blank" rel="nofollow">蛙蛙</a></li>
+<li><a href="https://github.com/dankeschon123/001-jianavi/edit/main/index.html" class="link-3" target="_blank" rel="nofollow">Edit</a></li>
+					</ul>
+				</div>
+				<div class="jj-list">
+					<div class="jj-list-tit"></div>
+					<ul class="jj-list-con _b">
+<li><a href="https://item.taobao.com/item.htm?id=546912803167" class="link-3" target="_blank" rel="nofollow">固化灯</a></li>
+<li><a href="https://qun.qq.com/manage.html" class="link-3" target="_blank" rel="nofollow">QQ群管理</a></li>
+<li><a href="https://www.kdocs.cn/latest" class="link-3" target="_blank" rel="nofollow">金山文档</a></li>
+<li><a href="https://www.facebook.com" class="link-3" target="_blank" rel="nofollow">测评</a></li>
+					
+						
+						
+<li><a href="https://www.amazon.ca/dp/B0B6F7KG9S/" class="link-3" target="_blank" rel="nofollow">打印机</a></li>												
+<li><a href="https://www.amz123.com/ai" class="link-3" target="_blank" rel="nofollow">AMZ123 AI</a></li>
+<li><a href="https://www.amazon.ca/dp/B0BJP35B61/" class="link-3" target="_blank" rel="nofollow">打印笔</a></li>					
+<li><a href="https://www.amazon.ca/dp/B0C1Z3ZXXN/" class="link-3" target="_blank" rel="nofollow">耗材2</a></li>
+<li><a href="https://www.amazon.ca/dp/B08NJWW2JB/" class="link-3" target="_blank" rel="nofollow">耗材</a></li>
+
+
+						
+						
+						
+						
+						
+						
+					</ul>
+				</div>
+				<div class="jj-list">
+					<div class="jj-list-tit"></div>
+					<ul class="jj-list-con _b">
+<li><a href="https://www.chenxunyun.com/" class="link-3" target="_blank" rel="nofollow">辰讯云</a></li>
+<li><a href="https://www.hsbianma.com/Code/3215909000.html" class="link-3" target="_blank" rel="nofollow">HS海关</a></li>
+<li><a href="https://www.freedidi.com/" class="link-3" target="_blank" rel="nofollow">零度博客</a></li>
+<li><a href="https://zhuanlan.zhihu.com/p/161844402" class="link-3" target="_blank" rel="nofollow">8元保号</a></li>
+<li><a href="https://www.google.com/search?q=%E7%A7%BB%E5%8A%A8%E4%BF%9D%E5%8F%B7%E5%A5%97%E9%A4%90" class="link-3" target="_blank" rel="nofollow">8元 Google</a></li>
+<li><a href="https://www.chinaz.com/vps/cheap/" class="link-3" target="_blank" rel="nofollow">云服务器</a></li>
+<li><a href="https://www.amz123.com/ai#tab_641b0bd7d98b0586134904f8" class="link-3" target="_blank" rel="nofollow">提示词</a></li>				
+<li><a href="https://www.amazon.ca/dp/B0BS3JMC7N/" class="link-3" target="_blank" rel="nofollow">铁氟龙</a></li>
+<li><a href="https://console.cloud.tencent.com/developer" class="link-3" target="_blank" rel="nofollow">腾讯云</a></li>
+					</ul>
+				</div>
+				<div class="jj-list">
+					<div class="jj-list-tit"></div>
+					<ul class="jj-list-con _b">
+<li><a href="https://www.amazon.ca/dp/B08Q87827M/" class="link-3" target="_blank" rel="nofollow">27M_16</a></li>
+<li><a href="https://www.amazon.ca/dp/B08Q85GT95/" class="link-3" target="_blank" rel="nofollow">T95_7</a></li>
+<li><a href="https://www.amazon.ca/dp/B09HC2KTMW/" class="link-3" target="_blank" rel="nofollow">TMW_4</a></li>
+<li><a href="https://www.amazon.ca/dp/B09HC3XT9V/" class="link-3" target="_blank" rel="nofollow">T9V_3</a></li>
+<li><a href="https://www.amazon.ca/dp/B09J4Y9Y3B/" class="link-3" target="_blank" rel="nofollow">Y3B_3</a></li>
+<li><a href="https://www.amazon.ca/dp/B09J4Y6P9M/" class="link-3" target="_blank" rel="nofollow">P9M_2</a></li>
+<li><a href="https://www.amazon.ca/dp/B09HBK4B41/" class="link-3" target="_blank" rel="nofollow">B41_1</a></li>
+<li><a href="https://www.amazon.ca/dp/B092HYVD2T/" class="link-3" target="_blank" rel="nofollow">D2T_1</a></li>
+<li><a href="https://www.amazon.ca/dp/B09HC3S3KY/" class="link-3" target="_blank" rel="nofollow">3KY_0</a></li>
+					</ul>
+				</div>
+				<div class="jj-list">
+					<div class="jj-list-tit"></div>
+					<ul class="jj-list-con _b">
+<li><a href="https://www.amazon.ca/dp/B09HC1R7M9/" class="link-3" target="_blank" rel="nofollow">7M9_0</a></li>
+<li><a href="https://www.amazon.ca/dp/B09HC1XLK4/" class="link-3" target="_blank" rel="nofollow">LK4_0</a></li>
+<li><a href="https://www.amazon.ca/s?me=A3RW624C8MU9Q6&marketplaceID=A2EUQ1WTGCTBG2" class="link-3" target="_blank" rel="nofollow">05店铺</a></li>
+<li><a href="https://www.amazon.ca/dp/B09J4XLPTB/" class="link-3" target="_blank" rel="nofollow">PTB_0</a></li>
+<li><a href="https://www.amazon.ca/dp/B092HX3J8C/" class="link-3" target="_blank" rel="nofollow">J8C_0</a></li>
+<li><a href="https://chrome.google.com/webstore/detail/new-tab-redirect/icpgjfneehieebagbmdbhnlpiopdcmna" class="link-3" target="_blank" rel="nofollow">New Tab</a></li>
+<li><a href="https://www.amazon.ca/dp/B092HYC5NF/" class="link-3" target="_blank" rel="nofollow">5NF_0</a></li>
+<li><a href="https://www.amazon.ca/dp/B092HYQZ2Z/" class="link-3" target="_blank" rel="nofollow">Z2Z_0</a></li>
+<li><a href="https://www.amazon.ca/dp/B09J4YKKLB/" class="link-3" target="_blank" rel="nofollow">KLB_0</a></li>
+					</ul>
+				</div>
+				<div class="jj-list">
+					<div class="jj-list-tit"></div>
+					<ul class="jj-list-con _b">
+
+<li><a href="http://192.168.1.188:24680/" class="link-3" target="_blank" rel="nofollow">ERP</a></li>						
+<li><a href="https://www.facebook.com/" class="link-3" target="_blank" rel="nofollow">Facebook</a></li>
+<li><a href="https://www.amazon.ca/Best-Sellers-Industrial-Scientific-3D-Printing-Materials/zgbs/industrial/11849151011/ref=zg_bs_pg_1?_encoding=UTF8&pg=1
+" class="link-3" target="_blank" rel="nofollow">耗材BS01</a></li>
+<li><a href="https://www.amazon.ca/Best-Sellers-Industrial-Scientific-3D-Printing-Materials/zgbs/industrial/11849151011/ref=zg_bs_pg_2?_encoding=UTF8&pg=2
+" class="link-3" target="_blank" rel="nofollow">耗材BS02</a></li>
+<li><a href="https://www.amazon.ca/s?me=A3RW624C8MU9Q6&marketplaceID=A2EUQ1WTGCTBG2" class="link-3" target="_blank" rel="nofollow">05店铺</a></li>
+<li><a href="https://www.amazon.ca/s?me=AEC5I6MNQQHCG&marketplaceID=A2EUQ1WTGCTBG2" class="link-3" target="_blank" rel="nofollow">08店铺</a></li>
+<li><a href="https://www.amazon.ca/s?me=AIP7EF241EP8T&marketplaceID=A2EUQ1WTGCTBG2" class="link-3" target="_blank" rel="nofollow">03店铺</a></li>
+<li><a href="https://www.amazon.ca/s?me=A38BBYTW037F9T&marketplaceID=A2EUQ1WTGCTBG2" class="link-3" target="_blank" rel="nofollow">02店铺</a></li>
+<li><a href="https://www.amazon.ca/s?me=A2QI06M5DKWBKI&marketplaceID=A2EUQ1WTGCTBG2" class="link-3" target="_blank" rel="nofollow">09店铺</a></li>
+					
+						
+						
+						
+
+						
+
+						
+						
+					</ul>
+					
+				</div>
+				<div class="jj-list">
+					<div class="jj-list-tit"></div>
+					<ul class="jj-list-con _b">
+<li><a href="https://www.amazon.ca/dp/B0BJP35B61/" class="link-3" target="_blank" rel="nofollow">B61_190</a></li>
+<li><a href="https://www.amazon.ca/dp/B08VS74MJ6/" class="link-3" target="_blank" rel="nofollow">MJ6_94</a></li>
+<li><a href="https://www.amazon.ca/dp/B09X2X3J4D/" class="link-3" target="_blank" rel="nofollow">J4D_67</a></li>
+<li><a href="https://www.amazon.ca/dp/B0B6HDWFYF/" class="link-3" target="_blank" rel="nofollow">FYF_46</a></li>
+<li><a href="https://www.amazon.ca/dp/B08S3DN1W7/" class="link-3" target="_blank" rel="nofollow">1W7_35</a></li>
+<li><a href="https://www.amazon.ca/dp/B0B6HCMSNT/" class="link-3" target="_blank" rel="nofollow">SNT_22</a></li>
+<li><a href="https://www.amazon.ca/dp/B09PHC2RN4/" class="link-3" target="_blank" rel="nofollow">RN4_18</a></li>
+<li><a href="https://www.amazon.ca/dp/B09MJ4712F/" class="link-3" target="_blank" rel="nofollow">12F_18</a></li>
+<li><a href="https://www.amazon.ca/dp/B08V4N8K6S/" class="link-3" target="_blank" rel="nofollow">K6S_14</a></li>
+					</ul>
+				</div>
+				<div class="jj-list">
+					<div class="jj-list-tit"></div>
+					<ul class="jj-list-con _b">
+<li><a href="https://www.amazon.ca/dp/B0B6HCQJVX/" class="link-3" target="_blank" rel="nofollow">JVX_11</a></li>
+<li><a href="https://www.amazon.ca/dp/B07X5VT56K/" class="link-3" target="_blank" rel="nofollow">56K_10</a></li>
+<li><a href="https://www.amazon.ca/dp/B0B6F7KG9S/" class="link-3" target="_blank" rel="nofollow">G9S</a></li>
+<li><a href="https://www.amazon.ca/dp/B0956Y25QG/" class="link-3" target="_blank" rel="nofollow">5QG</a></li>
+<li><a href="https://www.baidu.com/s?wd=%E6%97%A5%E5%8E%86" class="link-3" target="_blank" rel="nofollow">日历</a></li>
+<li><a href="https://www.wps.cn/learning/" class="link-3" target="_blank" rel="nofollow">WPS学习</a></li>
+<li><a href="https://10fastfingers.com/typing-test/english" class="link-3" target="_blank" rel="nofollow">10fastfingers</a></li>
+<li><a href="https://juejin.cn/" class="link-3" target="_blank" rel="nofollow">稀土掘金</a></li>
+<li><a href="https://sspai.com/" class="link-3" target="_blank" rel="nofollow">少数派</a></li>
+
+						
+						
+	
+											
+						
+						
+						
+					</ul>
+				</div>
+				<div class="jj-list">
+					<div class="jj-list-tit"></div>
+					<ul class="jj-list-con _b">
+<li><a href="https://www.google.com/search?q=site%3Aen.wikipedia.org+3d+printing+filament&sxsrf=AJOqlzVnR3epPokc3jH7XumYq3og0YRYvA%3A1678060370219&ei=UisFZIj5DOSrqtsPqLWt2Aw&ved=0ahUKEwiI6pyC_sX9AhXklWoFHahaC8sQ4dUDCA8&uact=5&oq=site%3Aen.wikipedia.org+3d+printing+filament&gs_lcp=Cgxnd3Mtd2l6LXNlcnAQA0oECEEYAVDJBFi3H2DgIGgCcAB4AIABogKIAZwckgEEMi0xM5gBAKABAcABAQ&sclient=gws-wiz-serp" class="link-3" target="_blank" rel="nofollow">Wikipedia</a></li>
+<li><a href="https://www.amazon.ca/dp/B08Q85GT95/" class="link-3" target="_blank" rel="nofollow">B08Q85GT95</a></li>
+<li><a href="https://www.facebook.com/settings?tab=account&section=name&view" class="link-3" target="_blank" rel="nofollow">Facebook起名</a></li>
+<li><a href="https://en.wikipedia.org/wiki/3D_printing_filament	" class="link-3" target="_blank" rel="nofollow">filament</a></li>
+<li><a href="https://www.amz123.com/thread-852692.htm" class="link-3" target="_blank" rel="nofollow">AMZ123</a></li>
+<li><a href="https://www.amazon.com/s?me=A16SSYC499NATI&marketplaceID=ATVPDKIKX0DER" class="link-3" target="_blank" rel="nofollow">一个店铺</a></li>
+<li><a href="https://www.amazon.ca/s?i=merchant-items&me=A1XKR8C06OV8W4&marketplaceID=A2EUQ1WTGCTBG2&qid=1678081384&ref=sr_pg_1" class="link-3" target="_blank" rel="nofollow">AMZ3D</a></li>
+<li><a href="https://www.amazon.ca/s?rh=p_4%3Agiantarm" class="link-3" target="_blank" rel="nofollow">GIANTARM</a></li>
+<li><a href="https://www.red-ring.cn/group/6716" class="link-3" target="_blank" rel="nofollow">小红圈</a></li>
+
+		
+						
+									
+						
+						
+	
+											
+						
+						
+						
+					</ul>
+				</div>
+				
+				<div class="jj-list">
+					<div class="jj-list-tit"></div>
+					<ul class="jj-list-con _b">
+
+<li><a href="https://github.com/dankeschon123/-BS-" class="link-3" target="_blank" rel="nofollow">GitHub</a></li>
+<li><a href="https://www.amazon.com/s?rh=p_4%3Acreality" class="link-3" target="_blank" rel="nofollow">Creality美国</a></li>						
+<li><a href="https://stackoverflow.com/questions/32854161/edit-webpage-with-javascript-trick-how-to-unedit" class="link-3" target="_blank" rel="nofollow">神奇代码</a></li>
+<li><a href="https://www.1688.com/" class="link-3" target="_blank" rel="nofollow">1688</a></li>
+<li><a href="https://ps.gaoding.com/#/" class="link-3" target="_blank" rel="nofollow">搞定PS</a></li>
+<li><a href="https://www.amazon.ca/dp/B09J4PHJJR/" class="link-3" target="_blank" rel="nofollow">JJR_0</a></li>						
+<li><a href="https://www.amazon.ca/dp/B09J4NNLZK/" class="link-3" target="_blank" rel="nofollow">LZK_0</a></li>
+<li><a href="https://www.amazon.ca/dp/B09J4YZBW7/" class="link-3" target="_blank" rel="nofollow">BW7_0</a></li>		
+<li><a href="https://www.amazon.ca/dp/B0B6JMTN8Q/" class="link-3" target="_blank" rel="nofollow">N8Q</a></li>							
+									
+						
+						
+	
+											
+						
+						
+						
+					</ul>
+				</div>
+				
+				
+				
+				
+				
+				
+			
+			</div>
+			
+			
+			
+		</div>
+
+		
+		
+	</div>
+
+	<script type="text/javascript"
+		src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/js.js"></script>
+</body>
+
+</html>
